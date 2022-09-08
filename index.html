@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>TJ GHI</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/assets/GHILOGO.ico">
+  <script defer src="/assets.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+  <section class="first">
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="links hover-color">Home</a>
+        <ul>
+          <li><a href="#about" class="links hover-color">About</a></li>
+          <li><a href="#join" class="links hover-color">Join</a></li>
+        </ul>
+        <a href="mailto:ghi.tjhsst@gmail.com" class="links hover-color hover-link-button">Contact</a>
+      </nav>
+    </header>
+    <div class="first-box">
+      <h1>TJ Global <br>
+        Health <br>
+        Initiative
+      </h1>
+      <h3>Friday 8B, Room 243 (Gilbert)</h3>
+    </div>
+  </section>
+  <section id="about" class="second">
+    <div class="text-card hover-up">
+      <h2 class="card-heading">What do we do?</h2>
+      <main>
+        Global Health Initiative is a TJHSST Club dedicated to raising awareness and taking action on some of the largest health issues plaguing the world. With issues ranging from the water crisis, famine, drug abuse, the refugee crisis, and widespread disease, we hope to do all we can to alleviate these global situations. Even through small steps, we can make a big difference. <br>
+        The club will have a new issue to tackle every school quarter, with presentations, guest speakers, and a special event to bring the TJ Community together in fighting these major problems.
+      </main>
+    </div>
+    <div class="img">
+      <img src="/assets/ghi.jpg" alt="Club photo!" class="hover-up">
+    </div>
+  </section>
+  <section id="join" class="third">
+    <div class="light-card text-card hover-up">
+      <h2 class="card-heading">How do I get involved?</h2>
+      <li>Join us Friday 8B in room 243!</li>
+      <li>Contact us on social media!</li>
+      <div>
+        <nav class="socials">
+          <a class="links" href="https://www.facebook.com/tjhsstGHI/" target="_blank">
+            <img class="social-icons" src="/assets/socials/facebook.svg" alt="GHI Facebook">
+          </a>
+          <a class="links" href="https://www.instagram.com/tjhsst_ghi/" target="_blank">
+            <img class="social-icons" src="/assets/socials/instagram.svg" alt="GHI Instagram">
+          </a>
+          <a class="links" href="mailto:ghi.tjhsst@gmail.com" target="_blank">
+            <img class="social-icons" src="/assets/socials/mail.svg" alt="GHI Facebook">
+          </a>
+        </nav>
+      </div>
+      <li>Get in touch with any of our officers!</li>
+    </div>
+    <div x-data="officers" id="officers-grid">
+      <template x-for="officer in officers" :key="officer.name">
+        <div class="officer">
+          <img class="hover-up" x-bind:src="'assets/officers/' + officer.image" />
+          <h3 x-text="officer.name" class="name"></h3>
+          <p>
+            <span x-text="officer.role" class="role"></span>,
+            <span x-text="officer.year" class="year"></span>
+          </p>
+        </div>
+      </template>
+    </div>
+  </section>
+  <footer>
+    <small>Designed and maintained by Daniel Chua. Copyright &copy; 2022</small>
+  </footer>
+</body>
+</html>
