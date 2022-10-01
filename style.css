@@ -56,12 +56,6 @@ body {
   display: inline-block;
 }
 
-@media all and (max-width: 575px) {
-  .navbar {
-     visibility: hidden;
-  }
-}
-
 .first {
   width: 100%;
   min-height: 100vh;
@@ -81,11 +75,16 @@ body {
 }
 
 @media all and (max-width: 590px) {
+  .navbar {
+    display: none;
+  }
   .first-box {
+    padding-top: 20vh;
     font-size: 3rem;
   }
   .first-box h3 {
-    font-size: 1.5rem;
+    padding-top: 10vh;
+    font-size: 2rem;
   }
 }
 
@@ -123,6 +122,34 @@ body {
   border-radius: 1rem;
 }
 
+@media all and (max-width: 1150px) {
+  .second {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2.5rem;
+  }
+  .second .text-card {
+    width: 100%;
+  }
+  .img {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .second {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0.5rem;
+  }
+  .second .text-card {
+    width: 100%;
+  }
+  .img {
+    width: 100%;
+  }
+}
+
 .third {
   background-image: url('/assets/dark.jpg');
   background-size: cover;
@@ -155,7 +182,7 @@ body {
 }
 
 .officer img {
-  width: 10rem;
+  height: 10rem;
   border-radius: 1rem;
 }
 
@@ -170,25 +197,13 @@ body {
   }
   #officers-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 3rem;
   }
 }
 
 @media all and (max-width: 800px) {
   #officers-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-@media all and (max-width: 750px) {
-  .second {
-    flex-direction: column;
-    gap: 3rem;
-  }
-  .second .text-card {
-    width: 100%;
-  }
-  .img {
-    width: 100%;
   }
 }
 
