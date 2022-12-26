@@ -81,11 +81,11 @@ body {
   .navbar {
     display: none;
   }
-  .first-box {
+  .intro-title {
     padding-top: 20vh;
     font-size: 3rem;
   }
-  .first-box h3 {
+  .intro-title h3 {
     padding-top: 10vh;
     font-size: 2rem;
   }
