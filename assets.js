@@ -1,3 +1,21 @@
+socials = [
+    {
+        name: 'GHI Facebook',
+        link: 'https://www.facebook.com/tjhsstGHI/',
+        image: 'facebook.svg',
+    },
+    {
+        name: 'GHI Instagram',
+        link: 'https://www.instagram.com/tjhsst_ghi/',
+        image: 'instagram.svg',
+    },
+    {
+        name: 'GHI Email',
+        link: 'mailto:ghi.tjhsst@gmail.com',
+        image: 'mail.svg',
+    },
+]
+
 officers = [
   {
     name: 'Mannat Srivastava',

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); /* Montserrat */
 
+/* General classes */
 :root {
   --light: #f1f1f1;
   --dark: #16213E;
@@ -39,6 +40,7 @@ body {
   transform: translateY(-2%);
 }
 
+/* Navbar */
 .navbar {
   width: 100%;
   padding: 3rem 5rem;
@@ -56,21 +58,22 @@ body {
   display: inline-block;
 }
 
-.first {
+/* Section 1 */
+.intro {
   width: 100%;
   min-height: 100vh;
   background-image: url('/assets/globe.jpg');
   background-size: cover;
 }
 
-.first-box {
+.intro-title {
   height: 100%;
   padding: 2.5rem 5rem;
   font-size: 4.5rem;
   color: var(--light);
 }
 
-.first-box h3 {
+.intro-title h3 {
   font-size: 2rem;
 }
 
@@ -89,15 +92,16 @@ body {
 }
 
 @media all and (max-width: 410px) {
-  .first-box {
+  .intro-title {
     font-size: 4rem;
   }
-  .first-box {
+  .intro-title {
     font-size: 1.5rem;
   }
 }
 
-.second {
+/* Section 2 */
+.about-section {
   background-color: var(--light);
   padding: 5rem;
 
@@ -114,22 +118,29 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.img  {
-  width: 40%;
+.club-photos {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
 }
-.img img {
-  width: 100%;
+.img {
+  width: 60%;
   border-radius: 1rem;
+  margin: auto;
 }
 
 @media all and (max-width: 1150px) {
-  .second {
+  .about-section {
     flex-direction: column;
     gap: 3rem;
     padding: 2.5rem;
   }
-  .second .text-card {
+  .about-section .text-card {
     width: 100%;
+  }
+  .club-photos {
+    width: 80%;
   }
   .img {
     width: 100%;
@@ -137,12 +148,15 @@ body {
 }
 
 @media all and (max-width: 750px) {
-  .second {
+  .about-section {
     flex-direction: column;
     gap: 3rem;
     padding: 0.5rem;
   }
-  .second .text-card {
+  .about-section .text-card {
+    width: 100%;
+  }
+  .club-photos {
     width: 100%;
   }
   .img {
@@ -150,7 +164,8 @@ body {
   }
 }
 
-.third {
+/* Section 3 */
+.get-involved {
   background-image: url('/assets/dark.jpg');
   background-size: cover;
   color: var(--light);
@@ -168,6 +183,19 @@ body {
   text-align: center;
 }
 
+.socials {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .socials a {
+    text-decoration: none;
+  }
+  .social-icons {
+    width: 2rem;
+    filter: invert(95%) sepia(8%) saturate(129%) hue-rotate(202deg) brightness(99%) contrast(96%);
+  }
+
 #officers-grid {
   width: 60%;
   display: grid;
@@ -184,15 +212,16 @@ body {
 .officer img {
   height: 10rem;
   border-radius: 1rem;
+  margin-bottom: 1rem;
 }
 
 @media all and (max-width: 950px) {
-  .third {
+  .get-involved {
     flex-direction: column;
     align-items: center;
     gap: 3rem;
   }
-  .third .text-card {
+  .get-involved .text-card {
     width: 100%;
   }
   #officers-grid {
@@ -207,19 +236,7 @@ body {
   }
 }
 
-.socials {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-.socials a {
-  text-decoration: none;
-}
-.social-icons {
-  width: 2rem;
-  filter: invert(95%) sepia(8%) saturate(129%) hue-rotate(202deg) brightness(99%) contrast(96%);
-}
-
+/* Footer */
 footer {
   background-color: var(--light);
   min-height: 10vh;

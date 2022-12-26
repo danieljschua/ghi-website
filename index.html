@@ -4,8 +4,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Daniel Chua" />
+  <meta name="description" content="TJHSST's Global Helath Initiative club." />
+  <meta name="keywords" content="TJHSST, GHI, Global Health Initiative, service" />
 
-  <title>TJ GHI</title>
+  <title>TJ Global Health</title>
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" href="/assets/GHILOGO.ico">
   <script defer src="/assets.js"></script>
@@ -13,7 +16,7 @@
 </head>
 
 <body>
-  <section class="first">
+  <section class="intro">
     <header>
       <nav class="navbar">
         <a href="index.html" class="links hover-color">Home</a>
@@ -24,7 +27,7 @@
         <a href="mailto:ghi.tjhsst@gmail.com" class="links hover-color hover-link-button">Contact</a>
       </nav>
     </header>
-    <div class="first-box">
+    <div class="intro-title">
       <h1>TJ Global <br>
         Health <br>
         Initiative
@@ -32,7 +35,7 @@
       <h3>Friday 8B, Room 243 (Gilbert)</h3>
     </div>
   </section>
-  <section id="about" class="second">
+  <section id="about" class="about-section">
     <div class="text-card hover-up">
       <h2 class="card-heading">What do we do?</h2>
       <main>
@@ -40,26 +43,25 @@
         The club will have a new issue to tackle every school quarter, with presentations, guest speakers, and a special event to bring the TJ Community together in fighting these major problems.
       </main>
     </div>
-    <div class="img">
-      <img src="/assets/ghi.jpg" alt="Club photo!" class="hover-up">
+    <div class="club-photos">
+      <img src="/assets/ghi1.jpg" alt="Club photo 2022" class="img hover-up">
+      <img src="/assets/ghi2.jpg" alt="Club photo 2023" class="img hover-up">
     </div>
   </section>
-  <section id="join" class="third">
+  <section id="join" class="get-involved">
     <div class="light-card text-card hover-up">
       <h2 class="card-heading">How do I get involved?</h2>
       <li>Join us Friday 8B in room 243!</li>
-      <li>Contact us on social media!</li>
+      <li>Contact us via social media or email!</li>
       <div>
-        <nav class="socials">
-          <a class="links" href="https://www.facebook.com/tjhsstGHI/" target="_blank">
-            <img class="social-icons" src="/assets/socials/facebook.svg" alt="GHI Facebook">
-          </a>
-          <a class="links" href="https://www.instagram.com/tjhsst_ghi/" target="_blank">
-            <img class="social-icons" src="/assets/socials/instagram.svg" alt="GHI Instagram">
-          </a>
-          <a class="links" href="mailto:ghi.tjhsst@gmail.com" target="_blank">
-            <img class="social-icons" src="/assets/socials/mail.svg" alt="GHI Facebook">
-          </a>
+        <nav class="socials" x-data="socials">
+          <template x-for="social in socials" :key="social.name">
+            <div class="socials">
+              <a :href="social.link" target="_blank" class="links">
+                <img :src="'assets/socials/' + social.image" alt="social.name" class="social-icons">
+              </a>
+            </div>
+          </template> 
         </nav>
       </div>
       <li>Get in touch with any of our officers!</li>

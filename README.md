@@ -1,5 +1,5 @@
-# GHI Website
+# 🌏 Global Health Initiative
 
-Hosted on [TJHSST Director](https://activities.tjhsst.edu/global-health-initiative/).
+A club that spreads awareness of global health crises and provides service opportunities to high school students.
 
-TJHSST service club that spreads awareness of global health crises and provides service opportunities to students!
+Learn more at https://activities.tjhsst.edu/global-health-initiative/
